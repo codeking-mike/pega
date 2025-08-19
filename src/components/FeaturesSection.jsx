@@ -120,7 +120,7 @@ const FeaturesSection = () => {
             </p>
             <a
               href="/register"
-              className="inline-flex items-center justify-center rounded-lg bg-yellow-600 px-8 py-3 text-base font-semibold text-indigo-100 hover:bg-indigo-100 transition duration-300 shadow-md"
+              className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 px-8 py-3 text-base font-semibold text-indigo-100 hover:bg-indigo-100 transition duration-300 shadow-md"
             >
               Open Account
             </a>

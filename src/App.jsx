@@ -3,7 +3,7 @@ import AuthProvider from "./auth/AuthContext";
 import Nav from "./components/Nav";
 import Home from "./pages/public/Home";
 import About from "./pages/public/About";
-import Plans from "./pages/public/Plans";
+import Plans from "./pages/public/OurMarkets";
 import Contact from "./pages/public/Contact";
 import Login from "./pages/public/Login";
 import Register from "./pages/public/Register";
@@ -16,6 +16,7 @@ import History from "./pages/dashboard/History";
 import Support from "./pages/dashboard/Support";
 import Profile from "./pages/dashboard/Profile";
 import AccountSettings from "./pages/dashboard/AccountSettings";
+import OurMarkets from "./pages/public/OurMarkets";
 
 import PendingDeposits from "./pages/admin/PendingDeposits";
 import PendingWithdrawals from "./pages/admin/PendingWithdrawals";
@@ -29,7 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About/>} />
-          <Route path="/plans" element={<Plans/>} />
+          <Route path="/markets" element={<OurMarkets/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />

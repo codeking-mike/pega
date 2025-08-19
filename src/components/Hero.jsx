@@ -17,7 +17,7 @@ const Hero = () => {
         >
           <h1 className="mb-6 text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-white">
             Trade Assets in <br />
-            Seamless and Secure Platform
+            Secure Platform
           </h1>
           <p className="mb-8 max-w-lg mx-auto lg:mx-0 text-gray-200 text-lg leading-relaxed">
             At Securepegawin, we help you trade your assets in a seamless and secure platform. Wether you are a newbie 
@@ -26,10 +26,10 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center lg:justify-start gap-4">
             <motion.a
               href="/register"
-              className="inline-flex items-center px-6 py-3 text-gray-200 font-semibold bg-yellow-600 rounded-lg shadow-md hover:text-gray-600 transition"
+              className="inline-flex items-center px-6 py-3 text-gray-200 font-semibold bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 rounded-lg shadow-md hover:text-gray-600 transition"
               whileHover={{ scale: 1.05 }}
             >
-              Register Now <FaArrowRight className="ml-2" />
+              Open an Account <FaArrowRight className="ml-2" />
             </motion.a>
             
           </div>

@@ -9,7 +9,7 @@ const Footer = () => {
 
           {/* Brand Info */}
           <div>
-            <h2 className="text-2xl font-bold mb-4 text-yellow-600">Securepegawin</h2>
+            <h2 className="text-2xl font-bold mb-4 text-gray-100">Securepegawin</h2>
             <p className="text-gray-300 mb-4 max-w-sm">
               A secure platform for every investor from beginner to advanced 
             </p>
@@ -31,7 +31,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-yellow-600">Quick Links</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-100">Quick Links</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
                 <a href="/about" className="hover:text-white transition">About Us</a>
@@ -49,7 +49,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-yellow-600">Contact Us</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-100">Contact Us</h3>
             <ul className="space-y-2 text-gray-300">
               <li>Email: support@securepegawin</li>
               
