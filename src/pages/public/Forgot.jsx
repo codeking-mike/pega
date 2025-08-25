@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Mail, Lock } from "lucide-react";
 
-export default function Login() {
+export default function Forgot() {
   const { login } = useAuth();
   const nav = useNavigate();
   const [email, setEmail] = useState("");
@@ -41,9 +41,9 @@ export default function Login() {
             className="mx-auto w-28"
           />
           <h2 className="text-2xl font-bold text-gray-100 mt-4">
-            Welcome Back 👋
+            Forgot Password
           </h2>
-          <p className="text-sm text-gray-400">Sign in to continue</p>
+          <p className="text-sm text-gray-400">Enter your email address to get a reset link</p>
           {err && <div className="mt-3 text-red-400">{err}</div>}
         </div>
 
@@ -60,17 +60,7 @@ export default function Login() {
             />
           </div>
 
-          <div className="relative">
-            <Lock className="absolute left-3 top-3 text-gray-400" size={20} />
-            <input
-              type="password"
-              placeholder="Password"
-              className="w-full pl-10 pr-4 py-3 rounded-xl bg-gray-900/60 text-gray-200 placeholder-gray-500 border border-gray-700 focus:ring-2 focus:ring-purple-500 outline-none transition"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-
+          
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
@@ -83,18 +73,13 @@ export default function Login() {
                   : "bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 hover:opacity-90"
               }`}
           >
-            {submitting ? "Signing In..." : "Sign In"}
+            {submitting ? "Sending Link..." : "Get Verification Link"}
           </motion.button>
         </form>
 
         {/* Footer */}
         <div className="text-center mt-6 space-y-3">
-          <a
-            href="/forgot"
-            className="block text-sm text-gray-400 hover:text-gray-200 transition"
-          >
-            Forgot Password?
-          </a>
+          
           <p className="text-sm text-gray-400">
             Not a member?{" "}
             <a

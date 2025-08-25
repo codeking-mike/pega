@@ -1,6 +1,7 @@
+// src/api.js
 import axios from "axios";
 
-const client = axios.create({
+const api = axios.create({
   baseURL: "http://127.0.0.1:8000/api", // your Laravel API
   withCredentials: true, // ✅ allow sending cookies (important for Sanctum/JWT)
   headers: {
@@ -9,10 +10,4 @@ const client = axios.create({
   },
 });
 
-client.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-  if (token) config.headers.Authorization = `Bearer ${token}`;
-  return config;
-});
-
-export default client;
+export default api;

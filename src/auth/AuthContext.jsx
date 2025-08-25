@@ -10,33 +10,58 @@ export default function AuthProvider({ children }) {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if (!token) return setReady(true);
-    client.get("/auth/me").then(res => {
-      setUser(res.data);
+
+    if (token) {
+      // Attach token to axios client
+      client.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+
+      client.get("/me")
+        .then((res) => {
+          setUser(res.data);
+        })
+        .catch(() => {
+          localStorage.removeItem("token");
+          delete client.defaults.headers.common["Authorization"];
+          setUser(null);
+        })
+        .finally(() => setReady(true));
+    } else {
       setReady(true);
-    }).catch(()=>setReady(true));
+    }
   }, []);
 
   const login = async (email, password) => {
-    const { data } = await client.post("/auth/login", { email, password });
+    const { data } = await client.post("/login", { email, password });
+
     localStorage.setItem("token", data.token);
+    client.defaults.headers.common["Authorization"] = `Bearer ${data.token}`;
+
     setUser(data.user);
   };
 
   const register = async (payload) => {
-    const { data } = await client.post("/auth/register", payload);
+    const { data } = await client.post("/register", payload);
+
     localStorage.setItem("token", data.token);
+    client.defaults.headers.common["Authorization"] = `Bearer ${data.token}`;
+
     setUser(data.user);
   };
 
   const logout = async () => {
-    try { await client.post("/auth/logout"); } catch {}
+    try {
+      await client.post("/logout");
+    } catch {}
+
     localStorage.removeItem("token");
+    delete client.defaults.headers.common["Authorization"];
     setUser(null);
   };
 
   return (
-    <AuthContext.Provider value={{ user, ready, login, register, logout, setUser }}>
+    <AuthContext.Provider
+      value={{ user, ready, login, register, logout, setUser }}
+    >
       {children}
     </AuthContext.Provider>
   );

@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useAuth } from "../auth/AuthContext";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from '../../public/images/spw-logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,15 +26,7 @@ const Navbar = () => {
             to="/"
             className="flex items-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 font-bold text-xl"
           >
-            <svg
-              className="h-8 w-8 mr-2 text-purple-400"
-              viewBox="0 0 28 24"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0.41 10.3847C1.14777 7.4194 2.85643 4.7861 5.2639 2.90424C7.6714 1.02234 10.6393 0 13.695 0C16.7507 0 19.7186 1.02234 22.1261 2.90424C24.5336 4.7861 26.2422 7.4194 26.98 10.3847H25.78C23.7557 10.3549 21.7729 10.9599 20.11 12.1147..." />
-            </svg>
-            Securepegawin
+            <img src={logo} className="w-[120px] h-[70px]" />
           </Link>
 
           {/* Desktop Nav */}
