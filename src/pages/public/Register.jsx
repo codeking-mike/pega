@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import client from "../../api/client";
 import { motion, AnimatePresence } from "framer-motion";
 import { Loader2, CheckCircle, XCircle } from "lucide-react";
 import logo from "../../../public/images/spw-logo.png";
@@ -20,8 +20,6 @@ const Register = () => {
   const [success, setSuccess] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null); // ✅ separate general error message
 
-  axios.defaults.withCredentials = true;
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -37,7 +35,7 @@ const Register = () => {
   setSuccess(null);
 
   try {
-    const response = await axios.post("http://127.0.0.1:8000/api/register", formData, {
+    const response = await client.post("/register", formData, {
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",

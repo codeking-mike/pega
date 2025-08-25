@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "https://securepegawin.com/api", //"http://127.0.0.1:8000/api", // your Laravel API
+  baseURL: "http://127.0.0.1:8000/api", //"https://securepegawin.com/api"
   withCredentials: true, // ✅ allow sending cookies (important for Sanctum/JWT)
   headers: {
     "Content-Type": "application/json",

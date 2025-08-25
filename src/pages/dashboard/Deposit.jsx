@@ -82,7 +82,7 @@ const Deposit = () => {
           <select
             value={selectedMethod}
             onChange={(e) => setSelectedMethod(e.target.value)}
-            className="w-full p-3 rounded-xl bg-white/10 border border-white/20 text-white backdrop-blur-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+            className="w-full p-3 rounded-xl bg-gray-900 text-white border border-white/20 backdrop-blur-md"
           >
             <option value="" disabled>
               Choose a method
