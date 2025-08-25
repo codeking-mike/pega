@@ -81,25 +81,25 @@ function App() {
           <Route
             path="/login"
             element={
-              <PublicLayout>
+              
                 <Login />
-              </PublicLayout>
+              
             }
           />
           <Route
             path="/register"
             element={
-              <PublicLayout>
+             
                 <Register />
-              </PublicLayout>
+             
             }
           />
           <Route
             path="/forgot"
             element={
-              <PublicLayout>
+              
                 <Forgot />
-              </PublicLayout>
+              
             }
           />
 

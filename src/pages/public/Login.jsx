@@ -3,6 +3,7 @@ import { useAuth } from "../../auth/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Mail, Lock } from "lucide-react";
+import logo from "../../../public/images/spw-logo.png";
 
 export default function Login() {
   const { login } = useAuth();
@@ -36,7 +37,7 @@ export default function Login() {
         {/* Logo + Welcome */}
         <div className="text-center mb-8">
           <img
-            src="../../assets/images/logo/logo-primary.svg"
+            src={logo}
             alt="logo"
             className="mx-auto w-28"
           />

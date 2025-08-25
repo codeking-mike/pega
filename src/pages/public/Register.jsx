@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import { Loader2, CheckCircle, XCircle } from "lucide-react";
+import logo from "../../../public/images/spw-logo.png";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -70,9 +71,19 @@ const Register = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-950 px-4">
       <div className="w-full max-w-md bg-gray-900 rounded-2xl shadow-lg p-8">
-        <h1 className="text-2xl font-bold text-center text-white mb-6">
-          Create Account
-        </h1>
+         {/* Logo + Welcome */}
+                <div className="text-center mb-4">
+                  <img
+                    src={logo}
+                    alt="logo"
+                    className="mx-auto w-28"
+                  />
+                  <h2 className="text-2xl font-bold text-gray-100 mt-1">
+                    Create Account
+                  </h2>
+                  <p className="text-sm text-gray-400">Fill the form below</p>
+                 
+                </div>
 
         {/* ✅ Success Message */}
         <AnimatePresence>
