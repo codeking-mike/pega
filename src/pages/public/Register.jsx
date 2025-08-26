@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import client from "../../api/client";
 import { motion, AnimatePresence } from "framer-motion";
 import { Loader2, CheckCircle, XCircle } from "lucide-react";
@@ -71,11 +71,12 @@ const Register = () => {
       <div className="w-full max-w-md bg-gray-900 rounded-2xl shadow-lg p-8">
          {/* Logo + Welcome */}
                 <div className="text-center mb-4">
+                 <Link to='/'>
                   <img
                     src={logo}
                     alt="logo"
                     className="mx-auto w-28"
-                  />
+                  /> </Link>
                   <h2 className="text-2xl font-bold text-gray-100 mt-1">
                     Create Account
                   </h2>

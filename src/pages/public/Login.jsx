@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "../../auth/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Mail, Lock } from "lucide-react";
 import logo from "../../../public/images/spw-logo.png";
@@ -36,11 +36,12 @@ export default function Login() {
       >
         {/* Logo + Welcome */}
         <div className="text-center mb-8">
+        <Link to='/'>
           <img
             src={logo}
             alt="logo"
             className="mx-auto w-28"
-          />
+          /> </Link>
           <h2 className="text-2xl font-bold text-gray-100 mt-4">
             Welcome Back 👋
           </h2>
