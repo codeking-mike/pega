@@ -8,18 +8,18 @@ export default function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [ready, setReady] = useState(false);
 
+  // Check if token exists on mount & fetch user
   useEffect(() => {
     const token = localStorage.getItem("token");
 
     if (token) {
-      // Attach token to axios client
       client.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-      client.get("/me")
-        .then((res) => {
-          setUser(res.data);
-        })
+      client
+        .get("/me")
+        .then((res) => setUser(res.data))
         .catch(() => {
+          // token invalid → clear it
           localStorage.removeItem("token");
           delete client.defaults.headers.common["Authorization"];
           setUser(null);
@@ -35,8 +35,9 @@ export default function AuthProvider({ children }) {
 
     localStorage.setItem("token", data.token);
     client.defaults.headers.common["Authorization"] = `Bearer ${data.token}`;
-
     setUser(data.user);
+
+    return data.user; // return for optional chaining in components
   };
 
   const register = async (payload) => {
@@ -44,14 +45,17 @@ export default function AuthProvider({ children }) {
 
     localStorage.setItem("token", data.token);
     client.defaults.headers.common["Authorization"] = `Bearer ${data.token}`;
-
     setUser(data.user);
+
+    return data.user;
   };
 
   const logout = async () => {
     try {
       await client.post("/logout");
-    } catch {}
+    } catch {
+      // Ignore errors (e.g., token already expired)
+    }
 
     localStorage.removeItem("token");
     delete client.defaults.headers.common["Authorization"];

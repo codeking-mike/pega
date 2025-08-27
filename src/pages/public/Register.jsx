@@ -35,36 +35,25 @@ const Register = () => {
   setSuccess(null);
 
   try {
-    const response = await client.post("/register", formData, {
-      withCredentials: true,
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
+    const { status } = await client.post("/register", formData);
 
-    // ✅ Handle Laravel default response
-    if (response.status === 201 || response.status === 200) {
+    if (status === 201 || status === 200) {
       setSuccess("Registration successful! Please login to continue.");
-
-      // ⏳ Redirect after showing message
-      setTimeout(() => {
-        navigate("/login");
-      }, 2500);
+      setTimeout(() => navigate("/login"), 2500);
     }
   } catch (error) {
-    if (error.response?.data?.errors) {
-      setErrors(error.response.data.errors);
-    } else if (error.response?.data?.message) {
-      setErrorMsg(error.response.data.message);
+    const { response } = error;
+    if (response?.data?.errors) {
+      setErrors(response.data.errors);
     } else {
-      setErrorMsg("Something went wrong. Please try again.");
+      setErrorMsg(response?.data?.message || "Something went wrong. Please try again.");
     }
     console.error("Registration failed:", error);
   } finally {
     setLoading(false);
   }
 };
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-950 px-4">
