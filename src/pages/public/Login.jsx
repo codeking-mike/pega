@@ -18,6 +18,10 @@ export default function Login() {
     setSubmitting(true);
     setErr("");
     try {
+
+      //fetch csrf token
+      await client.get("/sanctum/csrf-cookie");
+      
       await login(email, password);
       nav("/dashboard");
     } catch (e) {
