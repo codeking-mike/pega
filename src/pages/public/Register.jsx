@@ -35,8 +35,6 @@ const Register = () => {
   setSuccess(null);
 
   try {
-
-    await client.get("/sanctum/csrf-cookie");
     
     const { status } = await client.post("/register", formData);
 
