@@ -16,7 +16,7 @@ const Calltoaction = () => {
     </div>
 
     <div className="mx-auto mt-8 max-w-xl">
-        <Link to='/register'
+        <Link to='https://account.securepegawin.com/register.php'
         
           className="group mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-yellow-600 px-5 py-3 text-white transition focus:ring-3 focus:ring-yellow-400 focus:outline-hidden sm:mt-0 sm:w-auto"
         >

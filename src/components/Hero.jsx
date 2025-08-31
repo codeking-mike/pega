@@ -25,7 +25,7 @@ const Hero = () => {
           </p>
           <div className="flex flex-wrap justify-center lg:justify-start gap-4">
             <motion.a
-              href="/register"
+              href="https://account.securepegawin.com//register.php"
               className="inline-flex items-center px-6 py-3 text-gray-200 font-semibold bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 rounded-lg shadow-md hover:text-gray-600 transition"
               whileHover={{ scale: 1.05 }}
             >

@@ -119,7 +119,7 @@ const FeaturesSection = () => {
             
             </p>
             <a
-              href="/register"
+              href="https://account.securepegawin.com//register.php"
               className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 px-8 py-3 text-base font-semibold text-indigo-100 hover:bg-indigo-100 transition duration-300 shadow-md"
             >
               Open Account

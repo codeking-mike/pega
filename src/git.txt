@@ -3,3 +3,4 @@ git --work-tree dist add --all
 git commit -m "Deploy build"
 git push origin production --force
 git checkout main
+ 

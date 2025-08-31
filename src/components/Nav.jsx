@@ -48,7 +48,7 @@ const Navbar = () => {
 
             {!user && (
               <Link
-                to="/login"
+                to="https://account.securepegawin.com/"
                 className="ml-4 px-5 py-2 rounded-xl bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-white shadow-lg hover:opacity-90 transition"
               >
                 Login
@@ -63,14 +63,14 @@ const Navbar = () => {
                   Logout
                 </button>
                 <Link
-                  to="/dashboard"
+                  to="https://account.securepegawin.com/"
                   className="px-4 py-2 text-gray-300 hover:text-purple-400 transition"
                 >
                   Dashboard
                 </Link>
                 {user?.role === "admin" && (
                   <Link
-                    to="/admin/deposits"
+                    to="https://account.securepegawin.com/"
                     className="px-4 py-2 text-gray-300 hover:text-orange-400 transition"
                   >
                     Admin
@@ -119,7 +119,7 @@ const Navbar = () => {
               <li className="pt-4">
                 {!user && (
                   <Link
-                    to="/login"
+                    to="https://account.securepegawin.com/"
                     onClick={() => setIsOpen(false)}
                     className="w-full block text-center px-7 py-2 rounded-xl bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-white shadow-lg hover:opacity-90 transition"
                   >
@@ -135,7 +135,7 @@ const Navbar = () => {
                       Logout
                     </button>
                     <Link
-                      to="/dashboard"
+                      to="https://account.securepegawin.com/"
                       onClick={() => setIsOpen(false)}
                       className="block mt-3 text-gray-300 hover:text-orange-400 transition"
                     >
@@ -143,7 +143,7 @@ const Navbar = () => {
                     </Link>
                     {user?.role === "admin" && (
                       <Link
-                        to="/admin/deposits"
+                        to="https://account.securepegawin.com/"
                         onClick={() => setIsOpen(false)}
                         className="block mt-2 text-gray-300 hover:text-orange-400 transition"
                       >
