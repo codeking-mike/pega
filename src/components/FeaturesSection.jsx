@@ -76,11 +76,11 @@ const FeaturesSection = () => {
     </section>
 
     <section className="overflow-hidden px-4 bg-gray-800 text-white pb-20 pt-20 lg:pb-[90px] lg:pt-[120px] relative">
-      <div className="container mx-auto flex flex-wrap items-center justify-between">
+      <div className="container mx-auto flex flex-wrap items-center justify-start gap-8">
         {/* Left: Image Collage */}
         <div className="w-full px-4 lg:w-6/12 mb-10 lg:mb-0">
-          <div className="-mx-3 flex items-center sm:-mx-4">
-            <div className="w-full px-3 sm:px-4 xl:w-1/2 space-y-4">
+          
+            <div className="w-full items-end px-3 sm:px-4 space-y-4">
               <motion.img
                 src={upgradeimage}
                 alt="Aid Support 1"
@@ -92,7 +92,7 @@ const FeaturesSection = () => {
               />
               
             </div>
-          </div>
+         
         </div>
 
         {/* Right: Content */}

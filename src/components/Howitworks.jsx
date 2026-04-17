@@ -18,10 +18,10 @@ const Howitworks = () => {
                 </div>
               </div>
             </div>
-            <div className="-mx-4 flex flex-wrap">
+            <div className="-mx-4 flex flex-wrap items-stretch">
               <div className="w-full px-4 md:w-1/2 lg:w-1/3">
                 <div
-                  className="mb-9 rounded-[20px] bg-gray-800 flex flex-col justify-center p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10 dark:bg-dark-2"
+                  className="mb-9 h-full rounded-[20px] bg-gray-800 flex flex-col justify-center p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10 dark:bg-dark-2"
                 >
                   
                   <h4
@@ -37,7 +37,7 @@ const Howitworks = () => {
               </div>
               <div className="w-full px-4 md:w-1/2 lg:w-1/3">
                 <div
-                  className="mb-9 rounded-[20px] bg-gray-800 flex flex-col justify-center p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10"
+                  className="mb-9 h-full rounded-[20px] bg-gray-800 flex flex-col justify-center p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10"
                 >
                   
                   <h4
@@ -53,7 +53,7 @@ const Howitworks = () => {
               </div>
               <div className="w-full px-4 md:w-1/2 lg:w-1/3">
                 <div
-                  className="mb-9 rounded-[20px] bg-gray-800 flex flex-col justify-center p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10 dark:bg-dark-2"
+                  className="mb-9 h-full rounded-[20px] bg-gray-800 flex flex-col justify-center p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10 dark:bg-dark-2"
                 >
                   
                   <h4

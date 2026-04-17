@@ -6,11 +6,11 @@ import banner1 from '../../public/images/banner-image.png';
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 pt-28 lg:pt-40 pb-24 px-6 lg:px-12">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start lg:gap-10">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-center lg:gap-10">
         
         {/* Left Content */}
         <motion.div
-          className="w-full lg:w-5/12 text-center lg:text-left mb-12 lg:mb-0"
+          className="w-full lg:w-5/12 text-center lg:text-left mb-12 lg:mb-0 pt-4 lg:pt-8"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -37,16 +37,16 @@ const Hero = () => {
 
         {/* Right Image */}
         <motion.div
-          className="w-full lg:w-7/12 relative"
+          className="w-full lg:w-6/12 relative"
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-[520px] mx-auto">
             <img
               src={banner1}
               alt="Securepegawin"
-              className="w-full object-cover transform hover:scale-105 transition duration-500"
+              className="w-full h-auto object-cover transform hover:scale-105 transition duration-500"
             />
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent" />
